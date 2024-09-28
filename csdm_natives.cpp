@@ -132,7 +132,7 @@ static cell AMX_NATIVE_CALL csdm_setstyle(AMX *amx, cell *params)
 	for (size_t i=0; i<g_SpawnMngr.Spawns(); i++)
 	{
 		pSpawn = g_SpawnMngr.GetSpawn(i);
-		if (strcmpi(pSpawn->GetName(), name) == 0)
+		if (strcasecmp(pSpawn->GetName(), name) == 0)
 		{
 			g_SpawnMethod = i;
 			return 1;
